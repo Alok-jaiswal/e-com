@@ -36,10 +36,10 @@ This project is a simple e-commerce product listing page built with Next.js, Rea
 
 ## Screenshots
 
-![Product Listing Page](/test1.png)
-![Product Details Modal](/product-details-modal.png)
-![Profile Dropdown](/profile-dropdown.png)
-![Cart Drawer](/cart-drawer.png)
+![Product Listing Page](screenshots/test1.png)
+![Product Details Modal](screenshots/product-details-modal.png)
+![Profile Dropdown](screenshots/profile-dropdown.png)
+![Cart Drawer](screenshots/cart-drawer.png)
 
 ## Installation
 
