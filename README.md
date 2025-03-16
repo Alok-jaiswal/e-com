@@ -36,7 +36,7 @@ This project is a simple e-commerce product listing page built with Next.js, Rea
 
 ## Screenshots
 
-![Product Listing Page](/product-listing.png)
+![Product Listing Page](/test1.png)
 ![Product Details Modal](/product-details-modal.png)
 ![Profile Dropdown](/profile-dropdown.png)
 ![Cart Drawer](/cart-drawer.png)
@@ -77,6 +77,7 @@ This project is a simple e-commerce product listing page built with Next.js, Rea
 
 ## Project Structure
 
+```tree
 e-com/
 ├── components/
 │   ├── CartDrawer.js
@@ -93,6 +94,10 @@ e-com/
 ├── public/
 │   ├── logo.png
 │   ├── profile-icon.png
+│   ├── product-listing.png
+│   ├── product-details-modal.png
+│   ├── profile-dropdown.png
+│   ├── cart-drawer.png
 │   └── ...
 ├── redux/
 │   ├── cartSlice.js
