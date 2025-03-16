@@ -1,10 +1,7 @@
-// components/CartDrawer.js
-import { useSelector, useDispatch } from 'react-redux';
-import { addItem, removeItem, removeEntireItem } from '../redux/cartSlice';
-import styles from '../styles/cartDrawer.module.scss';
-import Link from 'next/link';
-import Filter from './Filter';
-import Sort from './Sort';
+import { useSelector, useDispatch } from "react-redux";
+import { addItem, removeItem, removeEntireItem } from "../redux/cartSlice";
+import styles from "../styles/cartDrawer.module.scss";
+import Link from "next/link";
 
 export default function CartDrawer({ isOpen, onClose }) {
   const cartItems = useSelector((state) => state.cart.items);
@@ -18,7 +15,7 @@ export default function CartDrawer({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className={`${styles.drawer} ${isOpen ? styles.open : ''}`}>
+    <div className={`${styles.drawer} ${isOpen ? styles.open : ""}`}>
       <div className={styles.drawerContent}>
         <div className={styles.drawerHeader}>
           <h3>Cart</h3>
@@ -28,7 +25,11 @@ export default function CartDrawer({ isOpen, onClose }) {
         </div>
         {cartItems.map((item) => (
           <div key={item.id} className={styles.item}>
-            <img src={item.image} alt={item.title} className={styles.itemImage} />
+            <img
+              src={item.image}
+              alt={item.title}
+              className={styles.itemImage}
+            />
             <div className={styles.itemDetails}>
               <span>{item.title}</span>
               <span>${item.price.toFixed(2)}</span>
@@ -37,7 +38,9 @@ export default function CartDrawer({ isOpen, onClose }) {
                 <span>{item.quantity}</span>
                 <button onClick={() => dispatch(addItem(item))}>+</button>
               </div>
-              <button onClick={() => dispatch(removeEntireItem(item))}>Remove</button>
+              <button onClick={() => dispatch(removeEntireItem(item))}>
+                Remove
+              </button>
             </div>
           </div>
         ))}

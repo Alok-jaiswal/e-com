@@ -1,4 +1,4 @@
-import "../styles/globals.scss"; // Import your global styles
+import "../styles/globals.scss";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 import Layout from "../components/Layout";

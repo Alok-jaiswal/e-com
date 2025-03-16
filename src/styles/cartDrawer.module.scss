@@ -1,4 +1,3 @@
-/* styles/cartDrawer.module.scss */
 .drawer {
   position: fixed;
   top: 0;
@@ -10,7 +9,7 @@
   transition: right 0.3s ease;
   z-index: 1001;
   display: flex;
-  flex-direction: column; // Added flex direction
+  flex-direction: column;
 }
 
 .open {
@@ -19,8 +18,8 @@
 
 .drawerContent {
   padding: 20px;
-  flex-grow: 1; // Allow content to grow
-  overflow-y: auto; // Add vertical scroll
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .drawerHeader {
@@ -100,7 +99,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .item {
@@ -108,7 +107,7 @@
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
-  justify-content: space-between; 
+  justify-content: space-between;
 
   &:last-child {
     border-bottom: none;

@@ -1,13 +1,18 @@
-// components/ProductDetailsModal.js
-import styles from "../styles/productDetailsModal.module.scss";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cartSlice";
+import styles from "../styles/productDetailsModal.module.scss";
 
 export default function ProductDetailsModal({ product, onClose, isOpen }) {
   const dispatch = useDispatch();
+  const [notification, setNotification] = useState(null);
 
   const handleAddToCart = () => {
     dispatch(addItem(product));
+    setNotification("Product added to cart!");
+    setTimeout(() => {
+      setNotification(null);
+    }, 2000);
   };
 
   if (!isOpen || !product) return null;
@@ -28,6 +33,9 @@ export default function ProductDetailsModal({ product, onClose, isOpen }) {
           <button className={styles.closeButton} onClick={onClose}>
             Close
           </button>
+          {notification && (
+            <div className={styles.notification}>{notification}</div>
+          )}
         </div>
       </div>
     </div>

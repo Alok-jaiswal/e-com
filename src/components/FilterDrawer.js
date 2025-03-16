@@ -1,13 +1,12 @@
-// components/FilterDrawer.js
-import styles from '../styles/filterDrawer.module.scss';
-import Filter from './Filter';
-import Sort from './Sort';
-import { useState, useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import styles from "../styles/filterDrawer.module.scss";
+import Filter from "./Filter";
+import Sort from "./Sort";
 
 export default function FilterDrawer({ isOpen, onClose, onFilter, onSort }) {
   const products = useSelector((state) => state.cart.items);
-  const [sortOption, setSortOption] = useState('default');
+  const [sortOption, setSortOption] = useState("default");
 
   const handleSort = (option) => {
     setSortOption(option);
@@ -17,7 +16,7 @@ export default function FilterDrawer({ isOpen, onClose, onFilter, onSort }) {
   if (!isOpen) return null;
 
   return (
-    <div className={`${styles.drawer} ${isOpen ? styles.open : ''}`}>
+    <div className={`${styles.drawer} ${isOpen ? styles.open : ""}`}>
       <div className={styles.drawerContent}>
         <div className={styles.drawerHeader}>
           <h3>Filters</h3>

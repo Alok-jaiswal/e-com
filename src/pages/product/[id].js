@@ -1,4 +1,3 @@
-// pages/product/[id].js
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/cartSlice";

@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Product Listing Page
 
-## Getting Started
+This project is a simple e-commerce product listing page built with Next.js, React, Redux Toolkit, and SCSS modules. It displays a list of products fetched from an API, allows users to view product details in a modal, add products to a cart, and view the cart in a drawer.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [API Data](#api-data)
+- [Redux Store](#redux-store)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Product Listing:** Displays a list of products with images, titles, prices, categories, and ratings.
+- **Product Details Modal:** Allows users to view detailed product information in a modal.
+- **Add to Cart:** Enables users to add products to a cart.
+- **Cart Drawer:** Displays the cart items in a drawer with quantity and total items.
+- **Responsive Design:** Ensures the website is accessible and user-friendly on various devices.
+- **Profile Icon:** Shows profile details when clicked.
+- **Footer:** Displays project information and a GitHub link.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Next.js:** React framework for server-side rendering and static site generation.
+- **React:** JavaScript library for building user interfaces.
+- **Redux Toolkit:** State management library for managing application state.
+- **SCSS Modules:** CSS modules with SCSS syntax for component-level styling.
+- **React Rating Stars Component:** Star rating component.
+- **Next Image:** Optimize images.
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Product Listing Page](/product-listing.png)
+![Product Details Modal](/product-details-modal.png)
+![Profile Dropdown](/profile-dropdown.png)
+![Cart Drawer](/cart-drawer.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+1.  **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone [https://github.com/Alok-jaiswal/e-com.git](https://www.google.com/search?q=https://github.com/Alok-jaiswal/e-com.git)
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Navigate to the project directory:**
+
+    ```bash
+    cd e-com
+    ```
+
+3.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+## Usage
+
+1.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+2.  **Open your browser and navigate to `http://localhost:3000` to view the application.**
+
+## Project Structure
+
+e-com/
+├── components/
+│   ├── CartDrawer.js
+│   ├── Footer.js
+│   ├── Header.js
+│   ├── Layout.js
+│   ├── ProductCard.js
+│   ├── ProductDetailsModal.js
+│   └── ...
+├── pages/
+│   ├── _app.js
+│   ├── index.js
+│   └── ...
+├── public/
+│   ├── logo.png
+│   ├── profile-icon.png
+│   └── ...
+├── redux/
+│   ├── cartSlice.js
+│   └── store.js
+├── styles/
+│   ├── globals.scss
+│   ├── header.module.scss
+│   ├── footer.module.scss
+│   ├── layout.module.scss
+│   ├── productCard.module.scss
+│   ├── productDetailsModal.module.scss
+│   └── ...
+├── .gitignore
+├── next.config.js
+├── package-lock.json
+├── package.json
+└── README.md
+
+## API Data
+
+The product data is fetched from the [Fake Store API](https://fakestoreapi.com/products).
+
+## Redux Store
+
+The Redux store manages the cart state. The `cartSlice.js` file defines the actions and reducers for adding and removing items from the cart.
+
+## Contributing
+
+Contributions are welcome! If you find a bug or have an idea for a new feature, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+- Alok Jaiswal - [https://github.com/Alok-jaiswal](https://github.com/Alok-jaiswal)
+

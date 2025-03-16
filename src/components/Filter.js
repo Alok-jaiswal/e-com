@@ -1,8 +1,10 @@
-// components/Filter.js
-import styles from '../styles/filter.module.scss';
+import styles from "../styles/filter.module.scss";
 
 export default function Filter({ products, onFilter }) {
-  const categories = ['all', ...new Set(products.map((product) => product.category))];
+  const categories = [
+    "all",
+    ...new Set(products.map((product) => product.category)),
+  ];
 
   return (
     <div className={styles.filter}>
