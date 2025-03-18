@@ -6,6 +6,7 @@ import Sort from "../components/Sort";
 import styles from "../styles/productListing.module.scss";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
   const response = await axios.get("https://fakestoreapi.com/products");
@@ -56,6 +57,7 @@ export default function ProductListing({ products }) {
           ))}
         </div>
       </div>
+      <Footer />
     </Layout>
   );
 }
