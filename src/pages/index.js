@@ -7,6 +7,7 @@ import styles from "../styles/productListing.module.scss";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NewProductCard from "../components/NewProductCard";
 
 export async function getServerSideProps() {
   const response = await axios.get("https://fakestoreapi.com/products");
@@ -51,9 +52,13 @@ export default function ProductListing({ products }) {
           <Filter products={products} onFilter={handleFilter} />
           <Sort onSort={handleSort} />
         </div>
+        {/* <div>
+          <NewProductCard />
+        </div> */}
         <div className={styles.products}>
           {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <NewProductCard key={product.id} product={product} />
+            // <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>
