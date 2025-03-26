@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import ProductCard from "../components/ProductCard";
+// import ProductCard from "../components/ProductCard";
 import Filter from "../components/Filter";
 import Sort from "../components/Sort";
 import styles from "../styles/productListing.module.scss";
@@ -22,6 +22,7 @@ export async function getServerSideProps() {
 export default function ProductListing({ products }) {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [sortOption, setSortOption] = useState("default");
+  const [showFilters, setShowFilters] = useState(false);
 
   const handleFilter = (category) => {
     if (category === "all") {
@@ -46,12 +47,14 @@ export default function ProductListing({ products }) {
 
   return (
     <Layout>
-      <Header onFilter={handleFilter} onSort={handleSort} />
+      <Header setShowFilters={setShowFilters} showFilters={showFilters} />
       <div className={styles.container}>
-        <div className={styles.filters}>
-          <Filter products={products} onFilter={handleFilter} />
-          <Sort onSort={handleSort} />
-        </div>
+        {showFilters && (
+          <div className={styles.filters}>
+            <Filter products={products} onFilter={handleFilter} />
+            <Sort onSort={handleSort} />
+          </div>
+        )}
         {/* <div>
           <NewProductCard />
         </div> */}

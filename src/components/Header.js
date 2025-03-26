@@ -4,8 +4,9 @@ import { useSelector } from "react-redux";
 import { useState, useRef, useEffect } from "react";
 import CartDrawer from "./CartDrawer";
 import Image from "next/image";
+import FilterIcon from "../Assest/FilterIcon";
 
-export default function Header() {
+export default function Header({ setShowFilters, showFilters }) {
   const cartItems = useSelector((state) => state.cart.items);
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -47,6 +48,12 @@ export default function Header() {
           E-com
         </Link>
         <div className={styles.nav}>
+          <button
+            onClick={() => setShowFilters(!showFilters)}
+            className={styles.filterButton}
+          >
+            <FilterIcon />
+          </button>
           <button onClick={toggleCart} className={styles.cartButton}>
             Cart ({totalItems})
           </button>
